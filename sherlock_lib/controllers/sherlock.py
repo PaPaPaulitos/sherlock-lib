@@ -10,11 +10,11 @@ networks.
 import re
 import requests
 
-from models import QueryStatus
-from models import QueryResult
+from ..models import QueryStatus
+from ..models import QueryResult
 
 
-from controllers import  get_response, interpolate_string, SherlockFuturesSession
+from . import  get_response, interpolate_string, SherlockFuturesSession
 
 
 def sherlock(username, site_data, query_notify, timeout=60):

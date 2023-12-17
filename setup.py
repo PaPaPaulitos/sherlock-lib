@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as arq:
     readme = arq.read()
 
-
-setup(name='sherlock-lib',
-    version='0.0.1',
+setup(
+    name='sherlock_lib',
+    version='0.0.4',
     license='MIT License',
     author='Paulo Ricardo Mesquita',
     long_description=readme,
@@ -13,12 +13,13 @@ setup(name='sherlock-lib',
     author_email='pauloricardomrs2002@gmail.com',
     keywords='sherlock, stalking, sherlock lib, sherlock-lib',
     description=u'🔎 Hunt down social media accounts by username across social networks',
-    packages=['sherlock-lib'],
+    packages=find_packages(), # Esta linha foi alterada para encontrar todos os pacotes
     install_requires=[
-    'certifi==2019.6.16',
-    'PySocks==1.7.0',
-    'requests==2.22.0',
-    'requests-futures==1.0.0',
-    'stem==1.8.0',
-    'exrex==0.11.0'
-],)
+        'certifi==2019.6.16',
+        'PySocks==1.7.0',
+        'requests==2.22.0',
+        'requests-futures==1.0.0',
+        'stem==1.8.0',
+        'exrex==0.11.0'
+    ],
+)

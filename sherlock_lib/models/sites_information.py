@@ -6,7 +6,7 @@ This is the raw data that will be used to search for usernames.
 import json
 import requests
 
-from models import SiteInformation
+from . import SiteInformation
 
 
 class SitesInformation:

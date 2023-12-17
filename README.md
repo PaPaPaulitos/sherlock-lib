@@ -15,7 +15,7 @@ This library was created to use the Sherlock Project in your own personal script
 
 ```console
 # installing using pip
-$ pip install sherlock-lib
+$ pip install sherlock-lib==1.0.0
 ```
 
 ## Usage

@@ -1,4 +1,4 @@
-from models import QueryNotify,QueryStatus
+from . import QueryNotify,QueryStatus
 
 class QueryNotifyDict(QueryNotify):
     def __init__(self,result=None):

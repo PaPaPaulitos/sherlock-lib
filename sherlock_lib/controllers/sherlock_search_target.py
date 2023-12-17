@@ -2,10 +2,10 @@ import sys
 import re
 import requests
 
-from models import QueryNotifyDict
-from models import SitesInformation
+from ..models import QueryNotifyDict
+from ..models import SitesInformation
 
-from controllers import sherlock
+from . import sherlock
 
 
 module_name = "Sherlock: Find Usernames Across Social Networks"
