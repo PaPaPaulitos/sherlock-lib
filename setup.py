@@ -5,7 +5,7 @@ with open("README.md", "r") as arq:
 
 setup(
     name='sherlock_lib',
-    version='0.0.5',
+    version='0.1.2',
     license='MIT License',
     author='Paulo Ricardo Mesquita',
     long_description=readme,
@@ -20,6 +20,6 @@ setup(
         'requests==2.22.0',
         'requests-futures==1.0.0',
         'stem==1.8.0',
-        'exrex==0.11.0'
+        'exrex==0.11.0',
     ],
 )
