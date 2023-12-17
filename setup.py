@@ -5,7 +5,7 @@ with open("README.md", "r") as arq:
 
 setup(
     name='sherlock_lib',
-    version='0.0.4',
+    version='0.0.5',
     license='MIT License',
     author='Paulo Ricardo Mesquita',
     long_description=readme,
@@ -13,7 +13,7 @@ setup(
     author_email='pauloricardomrs2002@gmail.com',
     keywords='sherlock, stalking, sherlock lib, sherlock-lib',
     description=u'🔎 Hunt down social media accounts by username across social networks',
-    packages=find_packages(), # Esta linha foi alterada para encontrar todos os pacotes
+    packages=find_packages(),
     install_requires=[
         'certifi==2019.6.16',
         'PySocks==1.7.0',

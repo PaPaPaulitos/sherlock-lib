@@ -15,7 +15,7 @@ This library was created to use the Sherlock Project in your own personal script
 
 ```console
 # installing using pip
-$ pip install sherlock-lib==1.0.0
+$ pip install sherlock-lib
 ```
 
 ## Usage
@@ -32,11 +32,14 @@ def search_target(username,timeout=60)
 ### Example
 
 ```python
-from sherlock-lib import search_target
+from sherlock_lib import search_target
 
 username = "john_doe"
 
 result = search_target(username)
+
+for k, v in result.items():
+    print(f"{k}: {v}")
 
 ```
 
