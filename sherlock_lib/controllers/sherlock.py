@@ -9,6 +9,7 @@ networks.
 
 import re
 import requests
+import os
 
 from ..models import QueryStatus
 from ..models import QueryResult
@@ -48,18 +49,11 @@ def sherlock(username, site_data, query_notify, timeout=60):
                        there was an HTTP error when checking for existence.
     """
 
-    # Notify caller that we are starting the query.
-    query_notify.start(username)
-
         # Normal requests
     underlying_session = requests.session()
 
-    # Limit number of workers to 20.
-    # This is probably vastly overkill.
-    if len(site_data) >= 20:
-        max_workers = 20
-    else:
-        max_workers = len(site_data)
+
+    max_workers = min(20, os.cpu_count() + 4)
 
     # Create multi-threaded session for all requests.
     session = SherlockFuturesSession(max_workers=max_workers,
