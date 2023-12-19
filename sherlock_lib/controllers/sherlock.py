@@ -30,8 +30,6 @@ def sherlock(username, site_data, query_notify, timeout=60):
     query_notify           -- Object with base type of QueryNotify().
                               This will be used to notify the caller about
                               query results.
-    tor                    -- Boolean indicating whether to use a tor circuit for the requests.
-    unique_tor             -- Boolean indicating whether to use a new tor circuit for each request.
     timeout                -- Time in seconds to wait before timing out request.
                               Default is 60 seconds.
 

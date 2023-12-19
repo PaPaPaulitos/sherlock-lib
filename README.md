@@ -21,11 +21,12 @@ $ pip install sherlock-lib
 ## Usage
 
 ```python
-def search_target(username,timeout=60)
+def search_target(username,timeout=60,sfw=False)
 ```
 
 - **Username**: Target's name on social media
 - **Timeout**: Maximum search time on each site
+- **Safe for Work**: Remove NSFW(Not Safe for Work) sites
 
 > This function returns a dictionary with the name of the sites and the link to the target's profile on the sites.
 
@@ -36,7 +37,7 @@ from sherlock_lib import search_target
 
 username = "john_doe"
 
-result = search_target(username)
+result = search_target(username,sfw=True)
 
 for k, v in result.items():
     print(f"{k}: {v}")

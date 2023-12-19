@@ -12,7 +12,7 @@ module_name = "Sherlock: Find Usernames Across Social Networks"
 __version__ = "0.14.3"
 
 
-def search_target(username,timeout=60):
+def search_target(username,timeout=60,sfw=False):
 
     # Check for newer version of Sherlock. If it exists, let the user know about it
     try:
@@ -34,6 +34,9 @@ def search_target(username,timeout=60):
     except Exception as error:
         print(f"ERROR:  {error}")
         sys.exit(1)
+
+    if sfw:
+        sites.remove_nsfw_sites()
 
     # Create original dictionary from SitesInformation() object.
     # Eventually, the rest of the code will be updated to use the new object
